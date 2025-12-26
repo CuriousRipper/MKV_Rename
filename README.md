@@ -1,6 +1,10 @@
 MKV_Renamer is designed to rename videos made with MakeMKV using its logs and TheDiscDB. It currently only does Blu-ray 
 disks of TV shows.  Eventually there will be a lot of support to make adding new shows less tedious.  
 
+* [Setup](#setup)
+* [Workflow](#workflow)
+
+![Screenshot](docs/imgs/MainWindow.png)
 # Setup
 ## Setting up MakeMKV
 1. View > Preferences > General > Miscellaneous  
