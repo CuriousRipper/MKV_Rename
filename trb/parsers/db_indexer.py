@@ -34,6 +34,7 @@ def build_index(filename, base_path):
                             _parse_release_file(release_path + "/" + file, bundle)
 
     try:
+        _ensure_path(filename)
         with open(filename, 'w') as fptr:
             json.dump(bundle["id"], fptr)
     except:
@@ -76,9 +77,9 @@ def index_refresh_check(index_file, db_path):
     """
     Check if the date modified on the series folder is newer than the index file and recommend rebuilding
     Not implemented
-    :return:
+    :return: True if the index needs to be refreshed
     """
-    pass
+    return True
 
 def id_search(identifier, id_type, index_file, db_path=""):
     """
@@ -90,7 +91,8 @@ def id_search(identifier, id_type, index_file, db_path=""):
     :return: path to the found release or an empty string
     """
     if db_path:
-        index_refresh_check(index_file, db_path)
+        if index_refresh_check(index_file, db_path):
+            build_index(index_file, db_path)
 
     try:
         with open(index_file) as fptr:

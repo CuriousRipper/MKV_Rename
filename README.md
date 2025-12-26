@@ -47,6 +47,6 @@ Check "Log Debug Messages"
 4. Select the disk in the pull down menu to the right. 
 5. The input folder should fill with the correct path. If it does not, select the path manually.
 6. Verify the output path is where you want the files to go. It accepts absolute paths and paths relative to the input folder.
-7. Click `Copy Filnames from DiscDB`.
+7. Click `Copy info from DiscDB`.
 8. If you don't like the recommend names you can edit them in the `Rename to:` column.
 9. Click `Rename!`
